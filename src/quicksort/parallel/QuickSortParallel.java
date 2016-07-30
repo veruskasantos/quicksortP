@@ -1,4 +1,4 @@
-package model;
+package quicksort.parallel;
 
 /**
  * Implement a multi-threaded QuickSort that allows any number of helper threads
@@ -17,7 +17,7 @@ package model;
  * @author George Heineman
  * @version 1.0, 6/1/09
  */
-public class QuickSort {
+public class QuickSortParallel {
 
 	/** Elements to be sorted. */
 	@SuppressWarnings("unchecked")
@@ -51,7 +51,7 @@ public class QuickSort {
 	 * @param ar    array to be sorted.
 	 */
 	@SuppressWarnings("unchecked")
-	public QuickSort (Comparable ar[]) {
+	public QuickSortParallel (Comparable ar[]) {
 		this.ar = ar;
 
 		// defaults

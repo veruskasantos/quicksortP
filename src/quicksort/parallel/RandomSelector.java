@@ -1,4 +1,4 @@
-package model;
+package quicksort.parallel;
 
 public class RandomSelector implements IPivotIndex {
 

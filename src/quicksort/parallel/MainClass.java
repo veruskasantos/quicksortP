@@ -1,9 +1,7 @@
-package main;
+package quicksort.parallel;
 
-import model.QuickSort;
-import model.RandomSelector;
 
-public class TestMain {
+public class MainClass {
 
 	private static Integer[] ar = {1,2,3,4,5,6,7};
 	private static Integer[] ar1 = {7,6,5,4,3,2,1,0};
@@ -17,7 +15,7 @@ public class TestMain {
 	private static RandomSelector random = new RandomSelector();
 	public static void main(String[] args){ 
 		//preencheArray(ar7);
-		QuickSort qs = new QuickSort(ar4);
+		QuickSortParallel qs = new QuickSortParallel(ar4);
 		qs.setPivotMethod(random);
 		//System.out.println("antes: ");
 		//printArray(ar7);

@@ -1,4 +1,4 @@
-package model;
+package quicksort.parallel;
 
 public class LastSelector implements IPivotIndex {
 
