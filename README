@@ -1,0 +1,28 @@
+Projeto da Disciplina de Metodologia Científica - DSC - UFCG
+
+Alunos: Júlio César Neves da Silva
+		Veruska Borges Santos
+		
+-----------------------------------------------------------------
+	Título: Investigação empírica do uso do paralelismo no problema de ordenação 
+para grandes volumes de dados
+
+Uso:
+ordenar.sh -a <algorithm> [-i <iputFile>, -o <outputFile>]
+
+Opções:
+	-a = número do algoritmo
+	-i = arquivo de entrada
+	-o = arquivo de saida
+	
+Algoritmos:
+ 1 - QuickSort Sequencial
+ 2 - QuickSort Paralelo
+
+Exemplos:
+
+> QuickSort Sequencial passando arquivos de entrada e saida
+	bash ordenar.sh -a 1 -i input.txt -o output.txt
+	
+> QuickSort Paralelo passando arquivos de entrada e saida
+	bash ordenar.sh -a 2 -i input.txt -o output.txt
