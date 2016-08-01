@@ -16,11 +16,12 @@ then
 fi 
   
 # --- Clean
-#rm -rf ./bin/*
+rm -rf ./bin/*
 
 # --- Build
-#echo "Compilando arquivos"
-#javac -d ./bin ./src/*/*.java
+echo "Compilando arquivos"
+javac -d ./bin ./src/*/*.java
+echo "Arquivos compilados"
 
 # --- Run
 if [ ! -z $INPUTFILE ] 
@@ -37,10 +38,14 @@ fi
 echo $INPUTFILE $OUTPUTFILE
 case $ALGORITHM in 
 1)
-	java -cp quicksort/QuickSortParalelo $INPUTFILE $OUTPUTFILE
+    echo "Rodando algoritmo paralelo"
+	java -cp bin/ quicksort/Runner par $INPUTFILE $OUTPUTFILE
+    echo "Algoritmo finalizado"
 ;;
 2)
-	java -cp quicksort/QuickSortSequencial $INPUTFILE $OUTPUTFILE
+    echo "Rodando algoritmo sequencial"
+	java -cp bin/ quicksort/Runner seq $INPUTFILE $OUTPUTFILE
+    echo "Algoritmo finalizado"
 ;;
 *)
 	echo "Algo errado aconteceu. Por favor, abra o arquivo README e verifique." 
@@ -48,8 +53,8 @@ case $ALGORITHM in
 ;;
 esac
 
-if [ ! -z $OUTPUTFILE ] 
-then
-	cp $OUTPUTFILE ../
-    rm $OUTPUTFILE
-fi
+#if [ ! -z $OUTPUTFILE ] 
+#then
+#	cp $OUTPUTFILE ../
+#   rm $OUTPUTFILE
+#fi
