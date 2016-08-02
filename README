@@ -27,5 +27,9 @@ Exemplos:
 > QuickSort Paralelo passando arquivos de entrada e saida
 	bash ordenar.sh -a 2 -i input.txt -o output.txt
 
-Caso não seja especificado um caminho, o arquivo de saida é gerado na pasta
+Observações:
+
+-Caso não seja especificado um caminho, o arquivo de saida é gerado na pasta
     em que o script foi chamado
+-Talvez seja necessário transformar o arquivo em executável. Isso pode ser feito por meio 
+    do comando chmod +x ordenar.sh
