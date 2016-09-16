@@ -17,15 +17,33 @@ public class Runner {
 		String caminhoEntrada = args.length > 1 ? args[1] : "";
 		String caminhoSaida = args.length > 2 ? args[2] : "output.txt";
 		
-		String[] dadosEntrada =  getEntrada(caminhoEntrada);
+		String[] dadosEntrada = getEntrada(caminhoEntrada);
+		Long tempoInicial;
+		Long tempoFinal;
 		
 		switch(algoritmo){
 		case "seq":
+			tempoInicial = System.currentTimeMillis();
+			System.out.println(tempoInicial);
+			
 			QuickSortSequencial.sort(dadosEntrada);
+			
+			tempoFinal = System.currentTimeMillis();
+			System.out.println(tempoFinal);
+			System.out.println("Tempo de execução: " + (tempoFinal - tempoInicial));
+			
 			escreveSaida(dadosEntrada, caminhoSaida);
 			break;
 		case "par":
+			tempoInicial = System.currentTimeMillis();
+			System.out.println(tempoInicial);
+			
 			QuickSortParalelo.sort(dadosEntrada);
+			
+			tempoFinal = System.currentTimeMillis();
+			System.out.println(tempoFinal);
+			System.out.println("Tempo de execução: " + (tempoFinal - tempoInicial));
+			
 			escreveSaida(dadosEntrada, caminhoSaida);
 			break;
 		}
